@@ -1,6 +1,6 @@
 # _Pig Dice Game_
 
-#### By _Michael Odongo_
+### By _Michael Odongo_
 
 ## Description
 
