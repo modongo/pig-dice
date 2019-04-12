@@ -6,7 +6,7 @@
 
 _This web application allows two players to play a game of Pig Dice._
 
-## Specs
+## BDD
 | Behavior        | Input           | Outcome  |
 | ------------- |:-------------:| -----:|
 | Player 1 inputs name and Player 2 inputs name, and clicks start button | Player 1:  / Player 2:  / Click START | Goes to game console |
