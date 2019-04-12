@@ -16,6 +16,14 @@ _This web application allows two players to play a game of Pig Dice._
 | Repeat for Player 2 | Roll = 1 | Round total = 0 / Total score = 0 / Player 1 begins |
 | When a player's total score reaches 100 or more, game ends and winner page shows | Player 1 total score = 100 | Winner page |
 
+### live site link
+
+<https://modongo.github.io/pig-dice/> 
+
+## Known Bugs
+
+there are currently no known bugs experienced on the website but feedback on bugs encountered during viewing of the page will be highly appreciated and will go a long way into making the website better for the users. The only reason that the website may fail to load is if the Internet connection is slow or disconnected which will require you to troubleshoot your Internet connection
+
 
 ## Setup/Installation Requirements
 

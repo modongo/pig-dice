@@ -2,3 +2,7 @@ body {
   background: url(../img/black-and-white-dice.jpg) no-repeat ;
   color: #d12912;
 }
+.h1-heading {
+  text-align: center;
+  color: #ddb9b4;
+}
