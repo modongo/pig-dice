@@ -87,6 +87,11 @@ $(document).ready(function () {
     $("#player2-panel").hide();
     $("#player1-panel").show();
     player2.winnerCheck();
+    if(player2.totalscore >= 100){
+      $("#roll-score-player2").empty();
+      $("#roll-totals-player2").empty();
+      $("#player2.totalscore").empty();
+    }
   });
 
 });
