@@ -80,7 +80,7 @@ $(document).ready(function () {
   $("button#player1-hold").click(function (event) {
     player1.hold();
     $(".messages").show();
-    $(".messages").text("Player1's, Roll scores moved to Total scores!");
+    $(".messages").text("Its Player 2 Turn, Player1, Roll scores moved to Final scores!");
     $("#final-totals-player1").text(player1.totalscore);
     $("#roll-score-player1").empty();
     $("#roll-totals-player1").empty();
@@ -103,7 +103,7 @@ $(document).ready(function () {
     player2.hold();
     $("#final-totals-player2").text(player2.totalscore);
     $(".messages").show();
-    $(".messages").text("Player2's, Roll scores moved to Total scores!");
+    $(".messages").text("It's Player 1 turn. Player2, Roll scores moved to Final scores!");
     $("#roll-score-player2").empty();
     $("#roll-totals-player2").empty();
     $("#player2-panel").hide();
