@@ -1,4 +1,5 @@
 // Where Business Logic Starts
+//utility function for generating roll dice score
 var throwdice = function () {
   return Math.floor(6 * Math.random()) + 1;
 }
