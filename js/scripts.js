@@ -94,7 +94,7 @@ $(document).ready(function () {
     $("#player1-panel").show();
     player2.winnerCheck();
     if(player2.totalscore >= 10){
-      $("#player2.totalscore").empty();
+      $("#player2.totalscore").text(0);
     }
   });
 
