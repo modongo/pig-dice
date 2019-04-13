@@ -32,6 +32,10 @@ Player.prototype.winnerCheck = function () {
 
   }
 }
+Player.prototype.newGame = function() {
+  this.totalscore = 0;
+  this.tempscore = 0;
+}
 // End of  business logic
 
 // User Interface
@@ -87,6 +91,7 @@ $(document).ready(function () {
       $(".messages").text("Player 1, Winner !!! " + player1.totalscore);
       $("#final-totals-player2").empty();
       $("#final-totals-player1").empty();
+    player1.newGame();
 
     }
   });
@@ -106,6 +111,7 @@ $(document).ready(function () {
       $(".messages").text("Player 2, Winner !!! Score " + player2.totalscore);
       $("#final-totals-player2").empty();
       $("#final-totals-player1").empty();
+      player2.newGame();
     }
   });
 
