@@ -92,6 +92,7 @@ $(document).ready(function () {
       $("#final-totals-player2").empty();
       $("#final-totals-player1").empty();
     player1.newGame();
+    player2.newGame();
 
     }
   });
@@ -112,6 +113,7 @@ $(document).ready(function () {
       $("#final-totals-player2").empty();
       $("#final-totals-player1").empty();
       player2.newGame();
+      player1.newGame();
     }
   });
 
