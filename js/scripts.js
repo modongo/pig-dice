@@ -14,7 +14,7 @@ function Player() {
 Player.prototype.rollone = function () {
   if (this.roll === 1) {
     this.tempscore = 0;
-    alert("Sorry , you rolled a 1! Your turn is over!");
+    // alert("Sorry , you rolled a 1! Your turn is over!");
   } else {
     this.tempscore += this.roll;
   }
@@ -53,7 +53,8 @@ $(document).ready(function () {
     $("#roll-score-player1").text(player1.roll);
     player1.rollone();
     if (player1.tempscore === 0) {
-      // alert(this.turn);
+      $(".messages").show()
+      $(".messages").text("Sorry , you rolled a 1! Your turn is over!");
       $("#player1-panel").hide();
       $("#player2-panel").show();
     }
@@ -65,6 +66,8 @@ $(document).ready(function () {
     $("#roll-score-player2").text(player2.roll);
     player2.rollone();
     if (player2.tempscore === 0) {
+      $(".messages").show();
+      $(".messages").text("Sorry , you rolled a 1! Your turn is over!");
       $("#player2-panel").hide();
       $("#player1-panel").show();
     }
