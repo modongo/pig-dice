@@ -1,7 +1,8 @@
+// Where Business Logic Starts
 var throwdice = function () {
   return Math.floor(6 * Math.random()) + 1;
 }
-
+// Create a player constructor
 function Player() {
   this.roll = 0;
   this.tempscore = 0;
