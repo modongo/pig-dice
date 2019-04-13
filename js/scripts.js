@@ -8,7 +8,6 @@ function Player() {
   this.roll = 0;
   this.tempscore = 0;
   this.totalscore = 0;
-  this.turn = 1;
 }
 
 // checking if roll value is one
@@ -29,13 +28,13 @@ Player.prototype.hold = function () {
   alert(this.playerName + ", your turn is over, pass the mouse!");
 }
 
-
+//check who has won
 Player.prototype.winnerCheck = function () {
   if (this.totalscore >= 100) {
     alert(this.playerName + " You are the winner!");
   }
 }
-
+// End of  business logic
 
 // User Interface
 $(document).ready(function () {
@@ -95,8 +94,6 @@ $(document).ready(function () {
     $("#player1-panel").show();
     player2.winnerCheck();
     if(player2.totalscore >= 100){
-      $("#roll-score-player2").empty();
-      $("#roll-totals-player2").empty();
       $("#player2.totalscore").empty();
     }
   });
