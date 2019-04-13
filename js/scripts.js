@@ -31,8 +31,8 @@ Player.prototype.hold = function () {
 //check who has won
 Player.prototype.winnerCheck = function () {
   if (this.totalscore >= 10) {
-    alert(this.playerName + " You are the winner! "+ "Total Score "+this.totalscore);
-    
+    // alert(this.playerName + " You are the winner! "+ "Total Score "+this.totalscore);
+    return 1;
 
   }
 }
@@ -46,6 +46,7 @@ $(document).ready(function () {
   player2 = new Player();
   $("#player1-panel").show();
   $("#player2-panel").hide();
+  $(".messages").hide();
 
 
   $("button#player1-roll").click(function (event) {
@@ -81,8 +82,11 @@ $(document).ready(function () {
 
     player1.winnerCheck();
     if(player1.totalscore >= 10){
+      $(".messages").show();
+      $(".messages").text("Player 1, Winner !!! "+player1.totalscore);
       $("#final-totals-player2").empty();
       $("#final-totals-player1").empty();
+
     }
   });
 
