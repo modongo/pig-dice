@@ -42,12 +42,13 @@ Player.prototype.newGame = function() {
 // User Interface
 $(document).ready(function () {
 
-
+//create player objects
   player1 = new Player();
   player2 = new Player();
+//set player to start the game
   $("#player1-panel").show();
   $("#player2-panel").hide();
-  $(".messages").hide();
+  $(".messages").text("player1 begins the game.");
 
 
   $("button#player1-roll").click(function (event) {
