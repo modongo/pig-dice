@@ -30,8 +30,7 @@ Player.prototype.hold = function () {
 
 //check who has won
 Player.prototype.winnerCheck = function () {
-  if (this.totalscore >= 10) {
-    // alert(this.playerName + " You are the winner! "+ "Total Score "+this.totalscore);
+  if (this.totalscore >= 100) {
     return 1;
 
   }
@@ -81,7 +80,7 @@ $(document).ready(function () {
     $("#player2-panel").show();
 
     player1.winnerCheck();
-    if(player1.totalscore >= 10){
+    if(player1.totalscore >= 100){
       $(".messages").show();
       $(".messages").text("Player 1, Winner !!! "+player1.totalscore);
       $("#final-totals-player2").empty();
