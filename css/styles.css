@@ -6,3 +6,7 @@ body {
   text-align: center;
   color: #ddb9b4;
 }
+.messages {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: bisque;
+}

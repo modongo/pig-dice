@@ -102,6 +102,8 @@ $(document).ready(function () {
     $("#player1-panel").show();
     player2.winnerCheck();
     if (player2.totalscore >= 100) {
+      $(".messages").show();
+      $(".messages").text("Player 2, Winner !!! Score " + player2.totalscore);
       $("#final-totals-player2").empty();
       $("#final-totals-player1").empty();
     }
