@@ -32,7 +32,6 @@ Player.prototype.hold = function () {
 Player.prototype.winnerCheck = function () {
   if (this.totalscore >= 10) {
     alert(this.playerName + " You are the winner! "+ "Total Score "+this.totalscore);
-    return this.totalscore;
     
 
   }
@@ -82,7 +81,8 @@ $(document).ready(function () {
 
     player1.winnerCheck();
     if(player1.totalscore >= 10){
-      $("#player1.totalscore").text(0);
+      $("#final-totals-player2").empty();
+      $("#final-totals-player1").empty();
     }
   });
 
@@ -95,7 +95,8 @@ $(document).ready(function () {
     $("#player1-panel").show();
     player2.winnerCheck();
     if(player2.totalscore >= 10){
-      $("#player2.totalscore").text(0);
+      $("#final-totals-player2").empty();
+      $("#final-totals-player1").empty();
     }
   });
 
