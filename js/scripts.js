@@ -30,7 +30,7 @@ Player.prototype.hold = function () {
 
 //check who has won
 Player.prototype.winnerCheck = function () {
-  if (this.totalscore >= 100) {
+  if (this.totalscore >= 10) {
     alert(this.playerName + " You are the winner!");
   }
 }
@@ -78,7 +78,7 @@ $(document).ready(function () {
     $("#player2-panel").show();
 
     player1.winnerCheck();
-    if(player1.totalscore >= 100){
+    if(player1.totalscore >= 10){
       $("#player1.totalscore").empty();
     }
   });
@@ -91,7 +91,7 @@ $(document).ready(function () {
     $("#player2-panel").hide();
     $("#player1-panel").show();
     player2.winnerCheck();
-    if(player2.totalscore >= 100){
+    if(player2.totalscore >= 10){
       $("#player2.totalscore").empty();
     }
   });
