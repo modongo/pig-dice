@@ -32,6 +32,7 @@ Player.prototype.winnerCheck = function () {
 
   }
 }
+//clear the all totals for new game
 Player.prototype.newGame = function() {
   this.totalscore = 0;
   this.tempscore = 0;
