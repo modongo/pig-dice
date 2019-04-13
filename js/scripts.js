@@ -80,9 +80,9 @@ $(document).ready(function () {
     $("#player2-panel").show();
 
     player1.winnerCheck();
-    if(player1.totalscore >= 100){
+    if (player1.totalscore >= 100) {
       $(".messages").show();
-      $(".messages").text("Player 1, Winner !!! "+player1.totalscore);
+      $(".messages").text("Player 1, Winner !!! " + player1.totalscore);
       $("#final-totals-player2").empty();
       $("#final-totals-player1").empty();
 
@@ -97,7 +97,7 @@ $(document).ready(function () {
     $("#player2-panel").hide();
     $("#player1-panel").show();
     player2.winnerCheck();
-    if(player2.totalscore >= 10){
+    if (player2.totalscore >= 100) {
       $("#final-totals-player2").empty();
       $("#final-totals-player1").empty();
     }
