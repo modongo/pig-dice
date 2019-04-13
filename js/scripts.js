@@ -33,7 +33,7 @@ Player.prototype.winnerCheck = function () {
   }
 }
 //clear the all totals for new game
-Player.prototype.newGame = function() {
+Player.prototype.newGame = function () {
   this.totalscore = 0;
   this.tempscore = 0;
 }
@@ -42,13 +42,13 @@ Player.prototype.newGame = function() {
 // User Interface
 $(document).ready(function () {
 
-//create player objects
+  //create player objects
   player1 = new Player();
   player2 = new Player();
-//set player to start the game
+  //set player to start the game
   $("#player1-panel").show();
   $("#player2-panel").hide();
-  $(".messages").text("player1 begins the game.");
+  $(".messages").text("Player1 begins the game.");
 
 
   $("button#player1-roll").click(function (event) {
@@ -57,7 +57,7 @@ $(document).ready(function () {
     player1.rollone();
     if (player1.tempscore === 0) {
       $(".messages").show()
-      $(".messages").text("Sorry , Player1, you rolled a 1! Your turn is over!");
+      $(".messages").text("Sorry, you rolled a 1! Your turn is over!");
       $("#player1-panel").hide();
       $("#player2-panel").show();
     }
@@ -70,7 +70,7 @@ $(document).ready(function () {
     player2.rollone();
     if (player2.tempscore === 0) {
       $(".messages").show();
-      $(".messages").text("Sorry ,Player2, you rolled a 1!Your turn is over!");
+      $(".messages").text("Sorry , you rolled a 1!Your turn is over!");
       $("#player2-panel").hide();
       $("#player1-panel").show();
     }
@@ -80,7 +80,7 @@ $(document).ready(function () {
   $("button#player1-hold").click(function (event) {
     player1.hold();
     $(".messages").show();
-    $(".messages").text("It's Player2 Turn,Player1, Roll scores moved to Final scores!");
+    $(".messages").text("It's Player2 Turn,Your Roll scores moved to Final scores!");
     $("#final-totals-player1").text(player1.totalscore);
     $("#roll-score-player1").empty();
     $("#roll-totals-player1").empty();
@@ -90,11 +90,11 @@ $(document).ready(function () {
     player1.winnerCheck();
     if (player1.totalscore >= 100) {
       $(".messages").show();
-      $(".messages").text("Player 1, Winner !!! " + player1.totalscore);
+      $(".messages").text("Player 1, Wins !!! With a Score of " + player1.totalscore);
       $("#final-totals-player2").empty();
       $("#final-totals-player1").empty();
-    player1.newGame();
-    player2.newGame();
+      player1.newGame();
+      player2.newGame();
 
     }
   });
@@ -103,7 +103,7 @@ $(document).ready(function () {
     player2.hold();
     $("#final-totals-player2").text(player2.totalscore);
     $(".messages").show();
-    $(".messages").text("It's Player1 turn. Player2, Roll scores moved to Final scores!");
+    $(".messages").text("It's Player1 turn. Your, Roll scores moved to Final scores!");
     $("#roll-score-player2").empty();
     $("#roll-totals-player2").empty();
     $("#player2-panel").hide();
@@ -111,7 +111,7 @@ $(document).ready(function () {
     player2.winnerCheck();
     if (player2.totalscore >= 100) {
       $(".messages").show();
-      $(".messages").text("Player 2, Winner !!! Score " + player2.totalscore);
+      $(".messages").text("Player 2, Wins !!! With a Score of " + player2.totalscore);
       $("#final-totals-player2").empty();
       $("#final-totals-player1").empty();
       player2.newGame();
