@@ -74,7 +74,7 @@ $(document).ready(function () {
   $("button#player1-hold").click(function (event) {
     player1.hold();
     $(".messages").show();
-    $(".messages").text("Roll scores moved to Total scores!");
+    $(".messages").text("Player1's, Roll scores moved to Total scores!");
     $("#final-totals-player1").text(player1.totalscore);
     $("#roll-score-player1").empty();
     $("#roll-totals-player1").empty();
