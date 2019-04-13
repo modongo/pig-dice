@@ -14,7 +14,6 @@ function Player() {
 Player.prototype.rollone = function () {
   if (this.roll === 1) {
     this.tempscore = 0;
-    // alert("Sorry , you rolled a 1! Your turn is over!");
   } else {
     this.tempscore += this.roll;
   }
@@ -24,8 +23,6 @@ Player.prototype.rollone = function () {
 Player.prototype.hold = function () {
   this.totalscore += this.tempscore;
   this.tempscore = 0;
-  // this.changeturn();
-  alert(this.playerName + ", your turn is over, pass the mouse!");
 }
 
 //check who has won
@@ -54,7 +51,7 @@ $(document).ready(function () {
     player1.rollone();
     if (player1.tempscore === 0) {
       $(".messages").show()
-      $(".messages").text("Sorry ,<strong>player1</strong>, you rolled a 1! Your turn is over!");
+      $(".messages").text("Sorry , Player1, you rolled a 1! Your turn is over!");
       $("#player1-panel").hide();
       $("#player2-panel").show();
     }
@@ -67,7 +64,7 @@ $(document).ready(function () {
     player2.rollone();
     if (player2.tempscore === 0) {
       $(".messages").show();
-      $(".messages").text("Sorry ,<strong>player2</strong>, you rolled a 1!Your turn is over!");
+      $(".messages").text("Sorry ,Player2, you rolled a 1!Your turn is over!");
       $("#player2-panel").hide();
       $("#player1-panel").show();
     }
@@ -76,6 +73,7 @@ $(document).ready(function () {
 
   $("button#player1-hold").click(function (event) {
     player1.hold();
+    $(".messages").text("Roll scores moved to Total scores!");
     $("#final-totals-player1").text(player1.totalscore);
     $("#roll-score-player1").empty();
     $("#roll-totals-player1").empty();
