@@ -95,7 +95,7 @@ $(document).ready(function () {
     player2.hold();
     $("#final-totals-player2").text(player2.totalscore);
     $(".messages").show();
-    $(".messages").text("Roll scores moved to Total scores!");
+    $(".messages").text("Player2's, Roll scores moved to Total scores!");
     $("#roll-score-player2").empty();
     $("#roll-totals-player2").empty();
     $("#player2-panel").hide();
