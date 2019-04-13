@@ -54,7 +54,7 @@ $(document).ready(function () {
     player1.rollone();
     if (player1.tempscore === 0) {
       $(".messages").show()
-      $(".messages").text("Sorry , you rolled a 1! Your turn is over!");
+      $(".messages").text("Sorry ,<strong>player1</strong>, you rolled a 1! Your turn is over!");
       $("#player1-panel").hide();
       $("#player2-panel").show();
     }
@@ -67,7 +67,7 @@ $(document).ready(function () {
     player2.rollone();
     if (player2.tempscore === 0) {
       $(".messages").show();
-      $(".messages").text("Sorry , you rolled a 1! Your turn is over!");
+      $(".messages").text("Sorry ,<strong>player2</strong>, you rolled a 1!Your turn is over!");
       $("#player2-panel").hide();
       $("#player1-panel").show();
     }
