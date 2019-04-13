@@ -31,7 +31,9 @@ Player.prototype.hold = function () {
 //check who has won
 Player.prototype.winnerCheck = function () {
   if (this.totalscore >= 10) {
-    alert(this.playerName + " You are the winner!");
+    alert(this.playerName + " You are the winner! "+ "Total Score "+this.totalscore);
+    
+
   }
 }
 // End of  business logic
@@ -79,7 +81,7 @@ $(document).ready(function () {
 
     player1.winnerCheck();
     if(player1.totalscore >= 10){
-      $("#player1.totalscore").empty();
+      $("#player1.totalscore").text(0);
     }
   });
 
